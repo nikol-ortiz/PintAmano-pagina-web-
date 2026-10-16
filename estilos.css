@@ -1,0 +1,809 @@
+
+:root {
+    --crema: #F7F0E5;
+    --papel: #FFF9F0;
+    --arena: #E5D0B4;
+    --terracota: #B95F43;
+    --arcilla: #D88967;
+    --cafe: #38271F;
+    --oliva: #737653;
+    --verde-claro: #DDE0C9;
+    --rosa: #E8C9B6;
+    --linea: rgba(56, 39, 31, 0.18);
+
+    --serif: "Playfair Display", Georgia, serif;
+    --sans: "DM Sans", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--crema);
+    color: var(--cafe);
+    font-family: var(--sans);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.encabezado {
+    min-height: 82px;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: var(--papel);
+    border-bottom: 1px solid var(--linea);
+}
+
+.logo {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+}
+
+.logo span {
+    color: var(--terracota);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 13px;
+}
+
+.menu a {
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--terracota);
+}
+
+.menu .boton-menu {
+    padding: 11px 18px;
+    background: var(--cafe);
+    color: var(--papel);
+    border-radius: 30px;
+}
+
+.menu .boton-menu:hover {
+    background: var(--terracota);
+    color: white;
+}
+
+/* PORTADA */
+
+.hero {
+    padding: 75px 9% 85px;
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+    gap: 70px;
+    overflow: hidden;
+}
+
+.sobrelinea {
+    margin-bottom: 18px;
+    color: var(--terracota);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+}
+
+.hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(55px, 6.5vw, 88px);
+    line-height: 0.99;
+    letter-spacing: -4px;
+    font-weight: 500;
+}
+
+.hero h1 span,
+.titulo-seccion h2 span,
+.inspiracion-texto h2 span,
+.nosotros h2 span {
+    color: var(--terracota);
+    font-style: italic;
+}
+
+.descripcion {
+    max-width: 440px;
+    margin: 27px 0;
+    color: #76645A;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.boton-principal {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 22px;
+    background: var(--terracota);
+    color: white;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.boton-principal:hover {
+    background: var(--cafe);
+    transform: translateY(-3px);
+}
+
+.boton-principal span {
+    font-size: 19px;
+}
+
+.detalle {
+    margin-top: 25px;
+    color: #8C796D;
+    font-size: 10px;
+    letter-spacing: 0.6px;
+}
+
+.hero-imagen {
+    position: relative;
+    padding: 0 12px 22px 0;
+}
+
+.marco-foto {
+    height: 440px;
+    overflow: hidden;
+    border-radius: 48% 48% 5px 5px;
+    background: var(--arena);
+    border: 10px solid var(--papel);
+    box-shadow: 12px 12px 0 var(--arena);
+}
+
+.sello {
+    position: absolute;
+    top: 25px;
+    right: -15px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background: var(--oliva);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    line-height: 1.3;
+    font-weight: 700;
+    transform: rotate(10deg);
+    border: 2px dashed rgba(255, 255, 255, 0.7);
+}
+
+.sello span:last-child {
+    font-size: 20px;
+}
+
+.texto-foto {
+    position: absolute;
+    left: -35px;
+    bottom: 5px;
+    padding: 12px 20px;
+    background: var(--papel);
+    color: var(--cafe);
+    font-family: var(--serif);
+    font-size: 17px;
+    font-style: italic;
+    box-shadow: 0 5px 20px rgba(56, 39, 31, 0.08);
+}
+
+/* FRANJA DECORATIVA */
+
+.franja {
+    padding: 17px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    background: var(--oliva);
+    color: white;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.franja span:nth-child(even) {
+    color: var(--arena);
+    font-size: 18px;
+}
+
+/* COLECCIÓN */
+
+.seccion {
+    padding: 100px 9%;
+}
+
+.titulo-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 35px;
+    margin-bottom: 45px;
+}
+
+.titulo-seccion h2,
+.nosotros h2 {
+    font-family: var(--serif);
+    font-size: clamp(38px, 4vw, 55px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.texto-lateral {
+    max-width: 300px;
+    color: #79695E;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.producto {
+    min-width: 0;
+}
+
+.producto-grande {
+    margin-top: 35px;
+}
+
+.producto-imagen {
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+    background: var(--arena);
+}
+
+.producto-grande .producto-imagen {
+    height: 385px;
+}
+
+.producto-imagen img {
+    transition: transform 0.6s;
+}
+
+.producto:hover .producto-imagen img {
+    transform: scale(1.05);
+}
+
+.etiqueta {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    padding: 7px 12px;
+    background: var(--papel);
+    color: var(--terracota);
+    font-size: 10px;
+    border-radius: 30px;
+}
+
+.etiqueta-verde {
+    background: var(--verde-claro);
+    color: var(--oliva);
+}
+
+.etiqueta-rosa {
+    background: var(--rosa);
+    color: var(--cafe);
+}
+
+.producto-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--linea);
+}
+
+.producto-info h3 {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.producto-info p {
+    margin-top: 5px;
+    color: #87766B;
+    font-size: 11px;
+}
+
+.flecha {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border: 1px solid var(--linea);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.producto:hover .flecha {
+    background: var(--terracota);
+    color: white;
+    border-color: var(--terracota);
+}
+
+.nota-fotos {
+    margin-top: 22px;
+    color: #87766B;
+    font-size: 11px;
+    font-style: italic;
+}
+
+/* INSPIRACIÓN */
+
+.inspiracion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 75px;
+    align-items: center;
+    background: var(--verde-claro);
+}
+
+.inspiracion-imagen {
+    position: relative;
+    height: 470px;
+    padding: 12px;
+    background: rgba(255, 249, 240, 0.65);
+}
+
+.inspiracion-imagen img {
+    object-fit: cover;
+}
+
+.etiqueta-imagen {
+    position: absolute;
+    right: -22px;
+    bottom: 35px;
+    max-width: 220px;
+    padding: 14px 20px;
+    background: var(--terracota);
+    color: white;
+    font-family: var(--serif);
+    font-size: 16px;
+    font-style: italic;
+}
+
+.inspiracion-texto h2 {
+    margin-bottom: 25px;
+    font-family: var(--serif);
+    font-size: clamp(38px, 4.2vw, 57px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.inspiracion-texto > p:not(.sobrelinea) {
+    margin-bottom: 17px;
+    color: #5F6250;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.enlace {
+    display: inline-block;
+    margin-top: 15px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--terracota);
+    color: var(--terracota);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.enlace span {
+    margin-left: 12px;
+}
+
+/* FRASE DESTACADA */
+
+.cita {
+    padding: 75px 20px;
+    text-align: center;
+    background: var(--terracota);
+    color: var(--papel);
+}
+
+.comillas {
+    display: block;
+    height: 55px;
+    color: var(--rosa);
+    font-family: var(--serif);
+    font-size: 85px;
+    line-height: 1;
+}
+
+.cita p {
+    margin: 15px 0 25px;
+    font-family: var(--serif);
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.3;
+    font-style: italic;
+}
+
+.firma {
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+/* NUESTRA HISTORIA */
+
+.nosotros {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 65px;
+    background: var(--papel);
+}
+
+.nosotros-titulo h2 {
+    font-size: clamp(35px, 4vw, 49px);
+}
+
+.nosotros-contenido > p {
+    margin-bottom: 30px;
+    color: #79695E;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.valores {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.valores > div {
+    padding-top: 15px;
+    border-top: 1px solid var(--linea);
+}
+
+.numero {
+    color: var(--terracota);
+    font-family: var(--serif);
+    font-size: 24px;
+    font-style: italic;
+}
+
+.valores h3 {
+    margin: 8px 0;
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.valores p {
+    color: #87766B;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* CONTACTO */
+
+.contacto {
+    padding: 75px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background: var(--cafe);
+    color: var(--papel);
+}
+
+.contacto .sobrelinea {
+    color: var(--arcilla);
+}
+
+.contacto h2 {
+    font-family: var(--serif);
+    font-size: clamp(35px, 4.5vw, 58px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.contacto h2 span {
+    color: var(--arcilla);
+    font-style: italic;
+}
+
+.contacto > div > p:last-child {
+    margin-top: 18px;
+    color: #D4C5B9;
+    font-size: 13px;
+}
+
+.boton-contacto {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    padding: 16px 22px;
+    flex-shrink: 0;
+    background: var(--papel);
+    color: var(--cafe);
+    border-radius: 4px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.boton-contacto:hover {
+    background: var(--arcilla);
+    color: white;
+}
+
+.boton-contacto span {
+    font-size: 18px;
+}
+
+/* PIE DE PÁGINA */
+
+.pie {
+    padding: 35px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: var(--papel);
+}
+
+.pie .logo {
+    font-size: 27px;
+}
+
+.pie p,
+.pie > a:not(.logo) {
+    color: #79695E;
+    font-size: 11px;
+}
+
+.pie > a:not(.logo):hover {
+    color: var(--terracota);
+}
+
+.pie small {
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid var(--linea);
+    color: #99877B;
+    font-size: 10px;
+}
+
+/* ADAPTACIÓN A CELULARES Y TABLETAS */
+
+@media (max-width: 900px) {
+    .encabezado {
+        padding: 18px 5%;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 6%;
+        gap: 35px;
+    }
+
+    .seccion {
+        padding: 75px 6%;
+    }
+
+    .inspiracion {
+        gap: 40px;
+    }
+
+    .nosotros {
+        gap: 35px;
+    }
+
+    .producto-imagen {
+        height: 280px;
+    }
+
+    .producto-grande .producto-imagen {
+        height: 320px;
+    }
+
+    .valores {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 650px) {
+    .encabezado {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+        font-size: 12px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 55px 7% 65px;
+        gap: 45px;
+    }
+
+    .hero h1 {
+        font-size: 62px;
+        letter-spacing: -2px;
+    }
+
+    .hero-imagen {
+        max-width: 430px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .marco-foto {
+        height: 390px;
+    }
+
+    .texto-foto {
+        left: -5px;
+    }
+
+    .franja {
+        gap: 12px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .seccion {
+        padding: 65px 7%;
+    }
+
+    .titulo-seccion {
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .titulo-seccion h2,
+    .nosotros h2 {
+        font-size: 41px;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .producto-grande {
+        margin-top: 0;
+    }
+
+    .producto-imagen,
+    .producto-grande .producto-imagen {
+        height: 400px;
+    }
+
+    .inspiracion {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .inspiracion-imagen {
+        height: 350px;
+        margin-right: 10px;
+    }
+
+    .etiqueta-imagen {
+        right: -10px;
+    }
+
+    .nosotros {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .valores {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .valores > div {
+        padding-top: 15px;
+    }
+
+    .contacto {
+        padding: 60px 7%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contacto h2 {
+        font-size: 39px;
+    }
+
+    .pie {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px 7%;
+    }
+
+    .pie small {
+        margin-top: 5px;
+    }
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp img {
+    width: 32px;
+    height: 32px;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    .producto-imagen,
+    .producto-grande .producto-imagen {
+        height: 320px;
+    }
+}
+
