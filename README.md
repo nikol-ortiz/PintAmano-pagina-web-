@@ -9,7 +9,7 @@ Página web dedicada al arte de pintar camisetas a mano, inspirada en la creativ
 
 ## &#x20;Objetivo
 
-Presentar diseños artesanales que transforman camisetas en piezas únicas, resaltando el arte y la identidad cultural.
+Presentar diseños pintados a mano que transforman camisetas en piezas únicas, resaltando el arte y la identidad cultural.
 
 ---
 
